@@ -6,8 +6,8 @@ if __name__ == "__main__":
     argc = len(argv)
 
     if argc == 0:
-        print("0 arguments.")
+        print("0 argument.")
     else:
-        print(f"{argc} arguments:")
+        print(f"{argc} argument:")
         for i, arg in enumerate(argv):
             print(f"{i + 1}: {arg}")
