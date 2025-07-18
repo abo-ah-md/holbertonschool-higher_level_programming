@@ -6,7 +6,7 @@ if __name__ == "__main__":
     argc = len(argv)
 
     if argc == 0:
-        print("0 argument.")
+        print("0 arguments.")
     if argc == 1:
         print(f"1 argument:\n1: {argv[0]}")
     if argc > 1:
