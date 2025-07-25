@@ -9,10 +9,10 @@ of these characters: ., ? and :
 def text_indentation(text):
     """print string with 2lines after ., ? and :"""
     n_line_char = [".", "?", ":"]
-    if not isinstance(text,str):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     for i in text:
         if i in n_line_char:
-            print(f"{i}",end="\n\n")
+            print(f"{i}", end="\n\n")
         else:
-            print(f"{i}",end="")
+            print(f"{i}", end="")
