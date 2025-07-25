@@ -7,14 +7,14 @@ to divide a matrix  and return the new matrix
 
 def matrix_divided(matrix, div):
     """divide a matrix  and return the new matrix """
-
+    new_matrix = []
     size_of_list = 0
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div,(int, float)):
         raise TypeError("div must be a number")
-    
     for i in range(len(matrix)):
+        new_matrix.append(list())
         if i == 0:
             size_of_list = len(matrix[i])
         if size_of_list != len(matrix[i]):
@@ -24,5 +24,7 @@ def matrix_divided(matrix, div):
         for j in matrix[i]:
             if not isinstance(j,(int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            new_matrix[i].append(round(j / div,2))
+    return new_matrix
+            
     
-    return list(map(lambda row: list(map(lambda x:x / div) if len(matrix) > 1 else lambda x: x / div,row),matrix))
