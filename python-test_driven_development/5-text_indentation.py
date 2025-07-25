@@ -14,10 +14,11 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     for i in range(len(text)):
         if has_space:
-            has_space = False
-            continue
+            if text[i] == " ":
+                continue
+            else:
+                has_space = False
         if text[i] in n_line_char:
-            
             print(f"{text[i]}", end="\n\n")
             if i+1 < len(text):
                 if text[i + 1].isspace():
