@@ -25,4 +25,4 @@ def matrix_divided(matrix, div):
             if not isinstance(j,(int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     
-    return list(map(lambda row: list(map(lambda x:x / div) if len(matrix) > 1 else matrix[0] / div,row),matrix))
+    return list(map(lambda row: list(map(lambda x:x / div) if len(matrix) > 1 else lambda x: x / div,row),matrix))
