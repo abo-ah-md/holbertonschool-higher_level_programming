@@ -11,8 +11,12 @@ def text_indentation(text):
     n_line_char = [".", "?", ":"]
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for i in text:
-        if i in n_line_char:
-            print(f"{i}", end="\n\n")
+    for i in range(len(text)):
+        if text[i] in n_line_char:
+            
+            print(f"{text[i]}", end="\n\n")
+            if text[i + 1] == " ":
+                i += i
+                continue
         else:
-            print(f"{i}", end="")
+            print(f"{text[i]}", end="")
