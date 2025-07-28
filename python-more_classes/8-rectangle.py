@@ -13,11 +13,6 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    @classmethod
-    def square(cls, size=0):
-        """this is an init for the Rectangle class """
-        return cls(size, size)
-
     def __init__(self, width=0, height=0):
         """this is an init for the Rectangle class """
         self.width = width
@@ -69,7 +64,6 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """this is an init for the Rectangle class """
 
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
