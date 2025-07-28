@@ -61,9 +61,6 @@ class Rectangle:
         else:
             return (self.height * 2) + (self.width * 2)
 
-    def number_of_instances(self):
-        return self.number_of_instances
-
     def __str__(self):
         """this is how to print for the Rectangle class """
         if self.width <= 0 or self.height <= 0:
