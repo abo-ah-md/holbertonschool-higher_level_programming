@@ -58,16 +58,12 @@ class Rectangle:
         else:
             return (self.height * 2) + (self.width * 2)
 
-    def __repr__(self):
-        """this is how to print for the Rectangle class """
-        for i in range(self.width):
-            for j in range(self.height):
-                print("#", end="")
-        print()
-
     def __str__(self):
         """this is how to print for the Rectangle class """
-        for i in range(self.width):
-            for j in range(self.height):
-                print("#", end="")
-        print()
+        if self.width <= 0 or self.height <= 0:
+            return ""
+        else:
+            lines = []
+            for _ in range(self.height):
+                lines.append("#" * self.width)
+        return "\n".join(lines)
