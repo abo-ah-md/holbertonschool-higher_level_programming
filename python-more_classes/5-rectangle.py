@@ -71,6 +71,6 @@ class Rectangle:
     def __repr__(self):
         """this is how to print for the Rectangle class """
         return f"Rectangle({self.width}, {self.height})"
-    
+
     def __del__(self):
         print("Bye rectangle...")
