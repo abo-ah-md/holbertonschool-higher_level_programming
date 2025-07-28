@@ -39,14 +39,14 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(selfl, value):
+    def height(self, value):
         """this is an setter for the Rectangle class """
 
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        selfl.__height = value
+        self.__height = value
 
     def area(self):
         """this is a perimeter calculate method for the Rectangle class """
