@@ -17,9 +17,8 @@ class BaseGeometry:
         pass
 
     def integer_validator(self, name, value):
-
         """
-        this  for valdating the value 
+        this  for valdating the value
         """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
@@ -31,4 +30,3 @@ class BaseGeometry:
         this module for creating an empty class
         """
         raise Exception("area() is not implemented")
-    
