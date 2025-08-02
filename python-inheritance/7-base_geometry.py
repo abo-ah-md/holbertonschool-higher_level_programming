@@ -21,4 +21,3 @@ class BaseGeometry:
         this module for creating an empty class
         """
         raise Exception("area() is not implemented")
-    
