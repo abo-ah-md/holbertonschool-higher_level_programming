@@ -15,3 +15,6 @@ ValueError: hieght must be greater than 0
 
 >>> ml.integer_validator("hieght",2)
 
+>>> ml.area()
+Traceback (most recent call last):
+area() is not implemented
