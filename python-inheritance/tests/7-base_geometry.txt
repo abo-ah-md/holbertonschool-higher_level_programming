@@ -13,8 +13,44 @@ Traceback (most recent call last):
 ...
 ValueError: hieght must be greater than 0
 
+>>> ml.integer_validator("hieght",0)
+Traceback (most recent call last):
+...
+ValueError: hieght must be greater than 0
+
 >>> ml.integer_validator("hieght",2)
 
 >>> ml.area()
 Traceback (most recent call last):
-area() is not implemented
+...
+Exception: area() is not implemented
+
+>>> ml.integer_validator("hieght")
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+>>> ml.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> ml.integer_validator("hieght",(4,))
+Traceback (most recent call last):
+...
+TypeError: hieght must be an integer
+
+>>> ml.integer_validator("hieght",True)
+
+>>> ml.integer_validator("hieght",[3])
+Traceback (most recent call last):
+...
+TypeError: hieght must be an integer
+
+>>> ml.integer_validator("hieght",{3,5})
+Traceback (most recent call last):
+...
+TypeError: hieght must be an integer
+
+>>> ml.integer_validator("hieght",None)
+Traceback (most recent call last):
+...
+TypeError: hieght must be an integer
