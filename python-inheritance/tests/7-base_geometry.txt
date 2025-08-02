@@ -1,6 +1,17 @@
->>> newlist = __import__('1-my_list').MyList
->>> ml = newlist(3, 1, 2)
->>> print(ml)
-[3, 1, 2]
->>> ml.print_sorted()
-[1, 2, 3]
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> ml = BaseGeometry()
+>>> print(dir(ml))
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'area', 'integer_validator']
+
+>>> ml.integer_validator("hieght","a")
+Traceback (most recent call last):
+...
+TypeError: hieght must be an integer
+
+>>> ml.integer_validator("hieght",-2)
+Traceback (most recent call last):
+...
+ValueError: hieght must be greater than 0
+
+>>> ml.integer_validator("hieght",2)
+
