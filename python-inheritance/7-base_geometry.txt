@@ -1,6 +1,0 @@
->>> newlist = __import__('1-my_list').MyList
->>> ml = newlist(3, 1, 2)
->>> print(ml)
-[3, 1, 2]
->>> ml.print_sorted()
-[1, 2, 3]
