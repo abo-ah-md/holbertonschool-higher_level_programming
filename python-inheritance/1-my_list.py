@@ -11,7 +11,13 @@ class MyList(list):
     """
 
     def __init__(self, *args):
-        super().__init__(*args)
+        """
+        this init for inhereting class list
+        """
+        super().__init__(args)
 
-    def print_sorted(self, *args):
-        return self.sort(*args)
+    def print_sorted(self):
+        """
+        this printing a sorted list
+        """
+        print(sorted(self))
