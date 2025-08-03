@@ -15,7 +15,7 @@ class Square(Rectangle):
         """
         Square is a sub class of Rectangle
         """
-        super().__init__()
+        super().__init__(size, size)
         self.integer_validator("size", size)
         self.__size = size
 
@@ -23,4 +23,4 @@ class Square(Rectangle):
         """
         calculating area of Square
         """
-        return self.__size**2
+        return self.__size ** 2
