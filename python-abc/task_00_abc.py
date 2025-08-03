@@ -7,6 +7,9 @@ from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
+    """
+    the Animal abstracted class contains sound abstracted method
+    """
 
     @abstractmethod
     def sound(self):
