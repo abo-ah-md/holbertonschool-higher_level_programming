@@ -23,11 +23,10 @@ class Square(Rectangle):
         """
         calculating area of Square
         """
-        return self.__size ** 2
-    
+        return self.__size**2
+
     def __str__(self):
         return f"[Square] {self.__size}/{self.__size}"
-    
+
     def __repr__(self):
         print(f"[Square] {self.__size}/{self.__size}")
-    
