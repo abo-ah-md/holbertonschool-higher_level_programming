@@ -4,7 +4,7 @@
 this module for creating an abc subclass
 """
 from abc import ABC, abstractmethod
-pi = 3.14
+
 
 
 class Shape(ABC):
@@ -25,14 +25,15 @@ class Circle(Shape):
     """
     the Animal abstracted class contains sound abstracted method
     """
+    pi = 3.141592653589793
     def __init__(self, radius):
         self.radius = radius
 
     def area(self):
-        return (self.radius**2) * pi
+        return (self.radius**2) * self.pi
 
     def perimeter(self):
-        return 2 * pi * self.radius
+        return 2 * self.pi * self.radius
 
 
 class Rectangle(Shape):
