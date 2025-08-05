@@ -4,7 +4,7 @@
 this module for creating an abc subclass
 """
 from abc import ABC, abstractmethod
-from math import pi
+pi = 3.14
 
 
 class Shape(ABC):
