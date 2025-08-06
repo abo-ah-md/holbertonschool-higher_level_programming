@@ -9,7 +9,7 @@ from abc import ABC, abstractmethod
 
 class Shape(ABC):
     """
-    the Animal abstracted class contains sound abstracted method
+    the Shape abstracted class contains sound abstracted method
     """
 
     @abstractmethod
@@ -27,7 +27,7 @@ class Circle(Shape):
     """
     pi = 3.141592653589793
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         return (self.radius**2) * self.pi
