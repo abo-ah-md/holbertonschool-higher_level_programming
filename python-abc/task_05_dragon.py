@@ -28,7 +28,8 @@ class Dragon(SwimMixin, FlyMixin):
     def roar(self):
         print("The creature roars!")
 
-draco = Dragon()
-draco.swim()  # Outputs: The creature swims!
-draco.fly()   # Outputs: The creature flies!
-draco.roar()  # Outputs: The dragon roars!
+if __name__ == "__main__":
+    draco = Dragon()
+    draco.swim()
+    draco.fly()
+    draco.roar()
