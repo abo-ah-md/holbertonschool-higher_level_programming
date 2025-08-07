@@ -19,7 +19,7 @@ class VerboseList(list):
 
     def remove(self,elem):
         if elem not in self:
-            pass
+            return
         print(f"Removed [{elem}] from the list.")
         super().remove(elem)
 
