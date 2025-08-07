@@ -21,9 +21,9 @@ class FlyMixin:
     This mixin adds flying behavior.
     """
     def fly(self):
-    """
-    This mixin adds flying behavior.
-    """
+        """
+        This mixin adds flying behavior.
+        """
 
         print("The creature flies!")
 
@@ -33,9 +33,9 @@ class Dragon(SwimMixin, FlyMixin):
     A Dragon that can swim, fly, and roar.
     """
     def roar(self):
-    """
-    This mixin adds flying behavior.
-    """
+        """
+        This mixin adds flying behavior.
+        """
         print("The creature roars!")
 
 if __name__ == "__main__":
