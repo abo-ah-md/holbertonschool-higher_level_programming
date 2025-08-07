@@ -18,10 +18,12 @@ class VerboseList(list):
         print(f"Added [{elem}] to the list.")
 
     def remove(self,elem):
+        if elem not in self:
+            pass
         print(f"Removed [{elem}] from the list.")
         super().remove(elem)
 
     def pop(self,elem = -1):
         print(f"Popped [{self[elem]}] from the list.")        
-        super().pop(elem)
+        return super().pop(elem)
         
