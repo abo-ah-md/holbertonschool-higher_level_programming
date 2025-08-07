@@ -13,9 +13,18 @@ class CountedIterator():
         self.counter = 0
 
     def __next__(self):
+        try:
+
+        item =  next(self.iterator)
         self.counter += 1
-        
-        return next(self.iterator)
+        return item
+    except StopIteration:
+        raise StopIteration
         
     def get_count(self):
+        """Return the iterator itself."""
         return self.counter
+
+    def __iter__(self):
+        """Return the iterator itself."""
+        return self
