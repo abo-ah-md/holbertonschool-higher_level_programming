@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 
-"""
-this module for creating an abc subclass
-"""
 class CountedIterator():
-    """
-    this calss extends some of the methods in list with printed message
-    """
+    """this calss extends some of the methods in list with printed message"""
 
     def __init__(self, data):
         self.iterator = iter(data)
@@ -14,11 +9,11 @@ class CountedIterator():
 
     def __next__(self):
         try:
-        item =  next(self.iterator)
-        self.counter += 1
-        return item
+            item =  next(self.iterator)
+            self.counter += 1
+            return item
         except StopIteration:
-        raise StopIteration
+            raise StopIteration
         
     def get_count(self):
         """Return the iterator itself."""
