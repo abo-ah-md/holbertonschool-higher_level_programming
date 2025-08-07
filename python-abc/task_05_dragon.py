@@ -1,27 +1,26 @@
 #!/usr/bin/python3
 
 """
-this module for creating an abc subclass
+This module creates a Dragon class using mixins for added behavior.
 """
-class SwimMixin():
-    """
-    this calss extends some of the methods in list with printed message
-    """
 
+class SwimMixin:
+    """
+    This mixin adds swimming behavior.
+    """
     def swim(self):
         print("The creature swims!")
 
-class FlyMixin():
+class FlyMixin:
     """
-    this calss extends some of the methods in list with printed message
+    This mixin adds flying behavior.
     """
-
     def fly(self):
         print("The creature flies!")
 
-class Dragon(SwimMixin,FlyMixin):
+class Dragon(SwimMixin, FlyMixin):
     """
-    this calss extends some of the methods in list with printed message
+    A Dragon that can swim, fly, and roar.
     """
     def roar(self):
-        print("The creature roar!")
+        print("The creature roars!")
