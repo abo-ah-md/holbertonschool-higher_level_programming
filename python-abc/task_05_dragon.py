@@ -1,59 +1,33 @@
-#!/usr/bin/python3
-
-"""
-This module creates a Dragon class using mixins for added behavior.
-"""
-
+#!/usr/bin/env python3
+# task_05_dragon.py
 
 class SwimMixin:
-    """
-    This mixin adds swimming behavior.
-    """
+    """Mixin class to add swimming ability."""
+
     def swim(self):
-        """
-        This mixin adds flying behavior.
-        """
+        """Prints a message indicating the creature can swim."""
         print("The creature swims!")
 
 
 class FlyMixin:
-    """
-    This mixin adds flying behavior.
-    """
-    def fly(self):
-        """
-        This mixin adds flying behavior.
-        """
+    """Mixin class to add flying ability."""
 
+    def fly(self):
+        """Prints a message indicating the creature can fly."""
         print("The creature flies!")
 
 
 class Dragon(SwimMixin, FlyMixin):
-    """
-    A Dragon that can swim, fly, and roar.
-    """
-    def __init__(self,ability=""):
-        """
-        This mixin adds flying behavior.
-        """
-        self.ability = ability
-
-    def abt(self):
-        """
-        This mixin adds flying behavior.
-        """
-        print(f"The creature {self.ability}s")
-    
+    """A class representing a dragon, inheriting swimming
+      and flying abilities."""
 
     def roar(self):
-        """
-        This mixin adds flying behavior.
-        """
-        print("The creature roars!")
+        """Prints a message indicating the dragon roars."""
+        print("The dragon roars!")
+
 
 if __name__ == "__main__":
-    draco = Dragon("drive a clude")
+    draco = Dragon()
     draco.swim()
     draco.fly()
     draco.roar()
-    draco.abt()
