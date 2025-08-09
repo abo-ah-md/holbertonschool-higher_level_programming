@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-import json
+
 """
 This function is for writing to aa file
 """
+import json
 
 
 def to_json_string(my_obj):
