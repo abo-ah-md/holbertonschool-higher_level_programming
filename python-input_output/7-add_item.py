@@ -12,5 +12,6 @@ if __name__ == "__main__":
         load_from_json_file(filename)
     else:
         arg_list = []
-        arg_list.extend(sys.argv[1:])
-        save_to_json_file(arg_list, filename)
+
+    arg_list.extend(sys.argv[1:])
+    save_to_json_file(arg_list, filename)
