@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """This function is for craeting an object from a json file"""
 import sys
 import os
