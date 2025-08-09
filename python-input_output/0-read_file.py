@@ -12,4 +12,4 @@ This function is for Reading a file
 
     with open(filename) as file:
         data = file.read()
-        print(data)
+        print(data,end="")
