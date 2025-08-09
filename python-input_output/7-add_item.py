@@ -8,7 +8,6 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 if __name__ == "__main__":
     arg_list = []
-    for arg in sys.argv:
-        arg_list.append(arg)
+    arg_list.extend(sys.argv[1:])
     save_to_json_file(arg_list,"add_item.json")
     load_from_json_file("add_item.json")
