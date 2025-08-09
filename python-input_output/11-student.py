@@ -14,7 +14,8 @@ class Student:
             return self.__dict__
         else:
             filtered_list = {
-                key: value for key, value in self.__dict__.items() if key in attrs
+                key: value for key, value in
+                self.__dict__.items() if key in attrs
             }
             return filtered_list
 
