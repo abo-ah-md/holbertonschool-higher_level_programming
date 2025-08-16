@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-''' This module for CSV serelize and deserize to json'''
+''' This module for xml serelize and deserize to dict'''
 
 import xml.etree.ElementTree as ET
 
@@ -34,12 +34,12 @@ def datatype_checker(value):
 def serialize_to_xml(dictionary, filename):
     try:
 
-        root = Et.Element("data")
-        for key, value in data.items:
-            child = ET.subElement(root,key)
+        root = ET.Element("data")
+        for key, value in data.items():
+            child = ET.SubElement(root,key)
             child.text = str(value)
             tree = ET.ElementTree(root)
-            tree.write(filename, encoding= "utf-8", xml_declaration =True)
+        tree.write(filename, encoding= "utf-8", xml_declaration =True)
     except:
         return False
 
