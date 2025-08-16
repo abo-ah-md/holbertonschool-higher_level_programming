@@ -35,7 +35,7 @@ def serialize_to_xml(dictionary, filename):
     try:
 
         root = ET.Element("data")
-        for key, value in data.items():
+        for key, value in dictionary.items():
             child = ET.SubElement(root,key)
             child.text = str(value)
             tree = ET.ElementTree(root)
