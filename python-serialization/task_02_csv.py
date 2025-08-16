@@ -8,11 +8,11 @@ import csv,json
 
 def convert_csv_to_json(filename):
     try:
-        with open(filename,"rb") as csvfile:
+        with open(filename,"r", encoding="utf-8") as csvfile:
             dicts =csv.DictReader(csvfile)
             data = list(dicts)
         
-            with open("data.json","wb") as data_file:
+            with open("data.json","w", encoding="utf-8") as data_file:
                 jsonified_data = json.dump(data,data_file)
             return True
     except:
