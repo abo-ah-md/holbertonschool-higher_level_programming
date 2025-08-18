@@ -7,7 +7,7 @@ data = requests.get("https://jsonplaceholder.typicode.com/posts")
 json_data = data.json()
 
 def fetch_and_print_posts():
-    print(data.status_code)
+    print(f"Status Code: {data.status_code}")
 
     for dict in json_data:
         print(dict["title"])
