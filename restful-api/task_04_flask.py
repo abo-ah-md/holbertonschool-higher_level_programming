@@ -31,6 +31,6 @@ def user(username):
     if username in users.keys():
         return jsonify(users[username])
     else:
-        return {"error": "User not found"},400
+        return {"error": "User not found"}, 404
 
 if __name__ == "__main__": app.run()
