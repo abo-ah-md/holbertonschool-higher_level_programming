@@ -15,5 +15,6 @@ def fetch_and_print_posts():
 def fetch_and_save_posts():
     new_data = [{key:value for key, value in dicts.items() if key != "userId"} for dicts in json_data]
     with open("posts.csv","w", newline="") as csv_file:
-        writer = csv.DictWriter(csv_file,fieldsnames = new_data[0].keys())
-
+        writer = csv.DictWriter(csv_file,fieldnames=new_data[0].keys())
+        writer.writeheader()
+        writer.writerows(new_data)
