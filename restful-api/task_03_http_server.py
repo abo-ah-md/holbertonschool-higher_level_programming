@@ -32,7 +32,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write("Endpoint not found".encode("utf-8"))
         
 
-port = 8080
+port = 8000
 httpd = http.server.HTTPServer(("",port),MyHandler)
 print(f"{port} is now open")
 httpd.serve_forever()
