@@ -29,7 +29,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("content-type","text/plain")
             self.end_headers()
-            self.wfile.write("Hello, this is a simple API!".encode("utf-8"))
+            self.wfile.write("OK".encode("utf-8"))
 
 
         else:
