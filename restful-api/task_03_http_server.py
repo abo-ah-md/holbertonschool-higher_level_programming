@@ -25,6 +25,13 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write("Hello, this is a simple API!".encode("utf-8"))
 
+        elif self.path == "/status":
+            self.send_response(200)
+            self.send_header("content-type","text/plain")
+            self.end_headers()
+            self.wfile.write("Hello, this is a simple API!".encode("utf-8"))
+
+
         else:
             self.send_response(404)
             self.send_header("content-type","text/plain")
