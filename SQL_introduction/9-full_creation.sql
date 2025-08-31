@@ -5,11 +5,10 @@ name VARCHAR(256) DEFAULT NULL,
 score INT NOT NULL,
 PRIMARY KEY (id)
 );
-ALTER TABLE second_table AUTO_INCREMENT = 1;
-INSERT INTO second_table (name,score) 
+INSERT INTO second_table (id,name,score) 
 values
-('John',10),
-('Alex',3),
-('Bob',14),
-('George',8);
+(1,'John',10),
+(2,'Alex',3),
+(3,'Bob',14),
+(4,'George',8);
 
