@@ -5,7 +5,7 @@ name VARCHAR(256) DEFAULT NULL,
 score INT NOT NULL,
 PRIMARY KEY (id)
 );
-
+ALTER TABLE second_table AUTO_INCREMENT = 1;
 INSERT INTO second_table (name,score) 
 values
 ('John',10),
