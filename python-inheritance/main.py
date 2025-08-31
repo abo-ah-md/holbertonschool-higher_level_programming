@@ -1,18 +1,11 @@
-#!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
-BaseGeometry = __import__('8-rectangle').BaseGeometry
+#!/usr/bin/env python3
+from task_00_abc import Animal, Dog, Cat
 
-r = Rectangle(3, 5)
+bobby = Dog()
+garfield = Cat()
 
-print(r)
-print(dir(r))
-print(issubclass(Rectangle, BaseGeometry))
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+print(bobby.sound())
+print(garfield.sound())
 
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+animal = Animal()
+print(animal.sound())
