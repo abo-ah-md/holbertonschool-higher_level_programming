@@ -1,10 +1,11 @@
 -- this is sub querry using forign key
 SELECT 
-    tv_shows.title
+    tv_shows.title,
+    tv_genres.name
 FROM tv_shows
-JOIN tv_show_genres 
+LEFT JOIN tv_show_genres 
     ON tv_shows.id = tv_show_genres.show_id
-JOIN tv_genres 
+LEFT JOIN tv_genres 
     ON tv_genres.id = tv_show_genres.genre_id
-WHERE tv_genres.name = 'Comedy'
-ORDER BY tv_shows.title ASC;
+ORDER BY tv_shows.title ASC, tv_genres.name ASC;
+
