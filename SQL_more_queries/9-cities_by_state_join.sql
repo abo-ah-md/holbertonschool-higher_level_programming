@@ -1,4 +1,5 @@
 -- this is sub querry using forign key
 SELECT cities.id, cities.name, states.name FROM cities 
-LEFT JOIN states ON cities.state.id = state_id;
+JOIN states ON cities.state.id = state_id
+ORDER BY ASC;
 
