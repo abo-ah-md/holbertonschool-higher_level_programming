@@ -24,9 +24,9 @@ def list_all_states():
             port=3306, host="localhost", user=user1, passwd=pass1, db=db1
         )
         c = database.cursor()
-        query = f"SELECT * FROM states WHERE name LIKE BINARY '{match}'\
+        query = "SELECT * FROM states WHERE name = %s\
                 ORDER BY states.id ASC"
-        c.execute(query)
+        c.execute(query, (match,))
         [print(state) for state in c.fetchall()]
     except MySQLdb.Error as e:
         print(f"Error connecting to databse, {e}")
