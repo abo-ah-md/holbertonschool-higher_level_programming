@@ -6,6 +6,7 @@ Usage: ./0-select_states.py <mysql username> <mysql password> <database name>
 import sys
 import MySQLdb
 
+
 def list_all_states():
     """
     Lists all states from the database hbtn_0e_0_usa sorted by id.
@@ -22,7 +23,7 @@ def list_all_states():
     except MySQLdb.Error as e:
         print(f"Error connecting to databse, {e}")
     finally:
-        if  c:
+        if c:
             c.close()
         if database:
             database.close()
