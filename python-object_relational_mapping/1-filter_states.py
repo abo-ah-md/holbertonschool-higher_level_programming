@@ -21,8 +21,8 @@ def list_all_states():
             port=3306, host="localhost", user=user1, passwd=pass1, db=db1
         )
         c = database.cursor()
-        query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY\
-                 states.id ASC"
+        query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' " \
+        "ORDER BY states.id ASC"
         c.execute(query)
         [print(state) for state in c.fetchall()]
     except MySQLdb.Error as e:
