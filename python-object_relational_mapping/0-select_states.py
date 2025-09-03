@@ -15,7 +15,6 @@ if __name__ == "__main__":
         )
     
     cursor = conn.cursor()
-    cursor.execute(f"USE {sys.argv[4]}")
     cursor.execute("SELECT * FROM  states ORDER BY id ASC")
     rows =cursor.fetchall()
     for row in rows:
