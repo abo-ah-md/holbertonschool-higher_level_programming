@@ -3,12 +3,11 @@
 # Usage: ./0-select_states.py <mysql username> \
 #                             <mysql password> \
 #                             <database name>
-
-import sys, MySQLdb
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect("localhost", 3306, sys.argv[1], sys.argv[2], sys.argv[3])
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    [print(row) for row in cursor.fetchall()]
-    cursor.close(); conn.close()
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = db.cursor()
+    c.execute("SELECT * FROM `states`")
+    [print(state) for state in c.fetchall()]
