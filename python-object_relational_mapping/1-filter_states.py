@@ -21,7 +21,8 @@ def list_all_states():
             port=3306, host="localhost", user=user1, passwd=pass1, db=db1
         )
         c = database.cursor()
-        c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
+        c.execute("SELECT * FROM states WHERE name LIKE 'N%'\
+                 ORDER BY states.id ASC")
         [print(state) for state in c.fetchall()]
     except MySQLdb.Error as e:
         print(f"Error connecting to databse, {e}")
