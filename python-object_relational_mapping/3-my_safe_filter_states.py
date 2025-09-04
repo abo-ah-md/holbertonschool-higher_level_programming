@@ -15,8 +15,6 @@ def main():
     query to prevent SQL injection.
     """
     if len(sys.argv) != 5:
-        print(f"Usage: {sys.argv[0]} <username> <password> <database>\
-        <state_name>")
         sys.exit(1)
 
     username = sys.argv[1]
