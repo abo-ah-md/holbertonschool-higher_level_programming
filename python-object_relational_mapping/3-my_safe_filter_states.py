@@ -1,27 +1,62 @@
 #!/usr/bin/python3
-"""Module for Selecting states where name equals argument(safe)"""
+"""
+A script that takes in arguments and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument.
+This version is safe from MySQL injections.
+"""
+import sys
+import MySQLdb
 
-if __name__ == '__main__':
-    from sys import argv
-    import MySQLdb
 
-    db = MySQLdb.connect(
-        user=argv[1],
-        password=argv[2],
-        database=argv[3]
-    )
+def main():
+    """
+    Connects to a MySQL database and retrieves states
+    based on a user-provided name, using a parameterized
+    query to prevent SQL injection.
+    """
+    if len(sys.argv) != 5:
+        print(f"Usage: {sys.argv[0]} <username> <password> <database>\
+        <state_name>")
+        sys.exit(1)
 
-    cursor = db.cursor()
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    state_name = sys.argv[4]
 
-    cursor.execute("SELECT * \
-                    FROM `states` \
-                    ORDER BY id")
+    db = None
+    cursor = None
 
-    for state in cursor.fetchall():
-        if state[1] == argv[4]:
-            print(state)
+    try:
+        db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=db_name
+        )
+        cursor = db.cursor()
 
-    if cursor:
-        cursor.close()
-    if db:
-        db.close()
+        # The key to preventing SQL injection is using parameterized queries.
+        query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+        cursor.execute(query, (state_name,))
+
+        # Fetch and print the results
+        for row in cursor.fetchall():
+            if row[1] == state_name:
+                
+                print(row)
+
+    except MySQLdb.Error as e:
+        print(f"Error connecting to MySQL: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    finally:
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
+
+
+if __name__ == "__main__":
+    main()
