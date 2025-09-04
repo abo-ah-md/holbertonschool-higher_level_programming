@@ -44,7 +44,6 @@ def main():
         # Fetch and print the results
         for row in cursor.fetchall():
             if row[1] == state_name:
-                
                 print(row)
 
     except MySQLdb.Error as e:
