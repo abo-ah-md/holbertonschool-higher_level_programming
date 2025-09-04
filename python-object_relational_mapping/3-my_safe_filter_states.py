@@ -16,7 +16,8 @@ def main():
     try:
 
         if len(sys.argv) != 5:
-            print("Usage: ./3-my_safe_filter_states.py <username> <password> <database> <state_name>")
+            print("Usage: ./3-my_safe_filter_states.py <username>\
+            <password> <database> <state_name>")
             return
         user1 = sys.argv[1]
         pass1 = sys.argv[2]
