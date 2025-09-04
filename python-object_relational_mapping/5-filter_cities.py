@@ -18,7 +18,8 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     querry = "SELECT cities.name FROM cities \
-       JOIN states ON cities.state_id = states.id  WHERE states.name = %s ORDER BY cities.id ASC"
+            JOIN states ON cities.state_id = states.id \
+            WHERE states.name = %s ORDER BY cities.id ASC"
     cursor.execute(querry, (state_name,))
     result = cursor.fetchall()
     print(", ".join([row[0] for row in result]))
