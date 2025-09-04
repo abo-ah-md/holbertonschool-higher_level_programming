@@ -28,7 +28,7 @@ def main():
             port=3306, host="localhost", user=user1, passwd=pass1, db=db1
         )
         c = database.cursor()
-        query = "SELECT * FROM states WHERE name BINARY = %s\
+        query = "SELECT * FROM states WHERE name  = %s\
                 ORDER BY states.id ASC"
         c.execute(query, (match,))
         [print(state) for state in c.fetchall()]
