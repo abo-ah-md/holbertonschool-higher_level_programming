@@ -24,7 +24,7 @@ if __name__ == "__main__":
         .order_by(State.id).all()
     )
     if state_id:
-        for state in states:
+        for state in state_id:
             print(f"{state.id}")
     else:
         print("Not found")
