@@ -1,6 +1,8 @@
 #!/usr/bin/node
 const { argv } = require('process');
-if (!argv[2] || !argv[3] || Number(argv[2]) === 1) {
+if (!argv[2] || !argv[3]) {
+  console.log(0);
+} else if (Number(argv[2]) === 1 && !argv[3]) {
   console.log(0);
 } else {
   const arr = [];
