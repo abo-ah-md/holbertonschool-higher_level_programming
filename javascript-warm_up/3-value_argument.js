@@ -3,6 +3,5 @@ const { argv } = require('process');
 if (!argv[2]) {
   console.log('No argument');
 } else {
-  const args = argv.slice(2);
-  args.forEach((value, index) => console.log(value));
+  console.log(argv[3]);
 }
