@@ -1,8 +1,4 @@
-const data = await getdata();
-const newCharList= createAlistFromObject(data);
-document.querySelector('#character').appendChild(newCharList);
-
-
+getdata();
 
 function createAlistFromObject(obj){
     const ol= document.createElement('ol');
@@ -29,8 +25,6 @@ function createAlistFromObject(obj){
 }
 
 
-
-
 async function getdata() {
 const url = 'https://swapi-api.hbtn.io/api/people/5/?format=json'
 try{
@@ -38,8 +32,11 @@ const response = await fetch(url);
 if (!response.ok) {
     throw new Error(`response status : ${response.status}`);
 }
-const result = await response.json();
-return result;
+await response.json().then(da =>{
+    
+const newCharList= createAlistFromObject(da);
+document.querySelector('#character').appendChild(newCharList);
+})
 }
  catch(error){
     console.log(error.message)
