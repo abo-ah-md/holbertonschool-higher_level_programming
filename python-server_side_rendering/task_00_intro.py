@@ -2,7 +2,7 @@ import os
 
 
 def generate_invitations(template, attendees):
-    try:
+    
         if not isinstance(template,str) or not isinstance(attendees,list):
             raise TypeError()
         if template.strip() == "":
@@ -14,9 +14,11 @@ def generate_invitations(template, attendees):
             for key, value in attendee.items():
                 if value is None:
                     attendee[key] = "N/A"
-            letter = template.format(**attendee)
+            try:
+                letter = template.format(**attendee)
+            except  KeyError as e:
+                raise Exception(f"Missing placeholder in attendee data: {e}")
 
             with open(f"output_{i}.txt", "w", encoding="utf-8") as file:
                 file.write(letter)
-    except:
-        raise Exception()
+            
