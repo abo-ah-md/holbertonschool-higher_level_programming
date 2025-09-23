@@ -6,8 +6,9 @@ def generate_invitations(template, attendees):
         if not isinstance(template,str) or not isinstance(attendees,list):
             raise TypeError()
         
-        if template.strip() == "" and not os.path.exists('template.txt'):
-            raise Exception("Template is empty, no output files generated.")
+        if template.strip() == "" :
+            print("Template is empty, no output files generated.")
+            return
         if len(attendees) == 0:
             raise Exception("No data provided, no output files generated.")
 
