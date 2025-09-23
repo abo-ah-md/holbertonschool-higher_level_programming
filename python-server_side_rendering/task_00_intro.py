@@ -3,7 +3,7 @@ import os
 
 def generate_invitations(template, attendees):
     try:
-        if not isinstance(template,str) or not isinstance(attendee,list):
+        if not isinstance(template,str) or not isinstance(attendees,list):
             raise TypeError()
         if template.strip() == "":
             raise Exception("Template is empty, no output files generated")
