@@ -10,7 +10,8 @@ def generate_invitations(template, attendees):
             print("Template is empty, no output files generated.")
             return
         if len(attendees) == 0:
-            raise Exception("No data provided, no output files generated.")
+            print("No data provided, no output files generated.")
+            return
 
         for i, attendee in enumerate(attendees, start=1):
             for key, value in attendee.items():
