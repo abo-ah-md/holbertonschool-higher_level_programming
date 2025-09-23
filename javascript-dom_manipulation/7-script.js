@@ -16,11 +16,11 @@ async function grapMovies () {
 // a function for adding the list of movies
 function addMoviesList (obj) {
   const ol = document.querySelector('#list_movies');
-const fragment = document.createDocumentFragment();
+  const fragment = document.createDocumentFragment();
   obj.forEach(movieDetail => {
     const li = document.createElement('li');
     li.textContent = movieDetail.title;
-    fragment.appendChild(li); 
+    fragment.appendChild(li);
   });
   ol.appendChild(fragment);
 }
