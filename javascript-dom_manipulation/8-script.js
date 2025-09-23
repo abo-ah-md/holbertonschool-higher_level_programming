@@ -1,3 +1,4 @@
+
 async function fetchWord () {
   try {
     const response = await fetch('https://hellosalut.stefanbohacek.com/?lang=fr');
@@ -15,4 +16,7 @@ function addWord (word) {
   const hello = document.getElementById('hello');
   hello.innerText = `${word.hello}`;
 }
-fetchWord();
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchWord();
+});

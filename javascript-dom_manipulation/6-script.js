@@ -3,7 +3,7 @@ getdata();
 function createAlistFromObject (obj) {
   const ol = document.createElement('ol');
   for (const key in obj) {
-    if ('key' in obj) {
+    if (Object.hasOwn(obj, key)) {
       const li = document.createElement('li');
       const value = obj[key];
       if (typeof value === 'object' && value != null) {
