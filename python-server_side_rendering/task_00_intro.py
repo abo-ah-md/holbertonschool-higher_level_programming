@@ -7,7 +7,7 @@ def generate_invitations(template, attendees):
             raise TypeError()
         try:
             if template.strip() == "": 
-                raise ValueError    
+                raise AssertionError    
         except:
             Exception("Template is empty, no output files generated.")
             
