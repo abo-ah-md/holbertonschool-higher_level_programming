@@ -4,7 +4,8 @@ import os
 def generate_invitations(template, attendees):
 
     if not isinstance(template, str) or not isinstance(attendees, list):
-        raise TypeError()
+        print("Template is empty, no output files generated.")
+        return
 
     if template.strip() == "":
         print("Template is empty, no output files generated.")
