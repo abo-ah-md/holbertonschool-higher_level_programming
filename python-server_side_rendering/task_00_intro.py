@@ -24,7 +24,7 @@ def generate_invitations(template, attendees):
             .replace("{event_date}", attendee.get("event_date", "N/A"))
             .replace("{event_location}", attendee.get("event_location", "N/A"))
         )
-        letter = template.format(**attendee)
+        
         print(letter)
         with open(f"output_{i}.txt", "w", encoding="utf-8") as file:
             file.write(letter)
