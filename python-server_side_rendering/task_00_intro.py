@@ -4,7 +4,7 @@ import os
 def generate_invitations(template, attendees):
 
     if not isinstance(template, str) or not isinstance(attendees, list):
-        print("Template is empty, no output files generated.")
+        print("invalid input type")
         return
 
     if template.strip() == "":
